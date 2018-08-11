@@ -10,8 +10,6 @@ body {
   box-sizing: border-box;
 }
 
-/* general */
-
 .container {
   width: 100%;
   max-width: 960px;
@@ -50,13 +48,11 @@ h3 {
   font-size: 22px;
 }
 
-/* header */
-
-#masthead {
+#header {
   position: fixed;
   z-index: 99;
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 30px;
   overflow: auto;
   color: #fff;
   background: #fff;
@@ -127,13 +123,41 @@ h3, h2 {
 .main-section {
   float: left;
   width: 100%;
-  max-width: 960px;
+  max-width: 650px;
   padding: 30px;
   margin: 0 0 40px;
   background: #fff;
   border: 1px solid #ddd;
 }
 
+/* sidebar */
+.sidebar {
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 270px;
+  float: right;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+h3, .sidebar, h2 {
+  border-bottom: 2px solid  #eee;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 22px;
+}
+
+.social {
+  width: 62px;
+  height: 62px;
+  margin-top: 8px;
+  margin-right: 5px;
+}
+
+.social:last-child {
+  margin-right: 0;
+}
 /* portfolio page */
 
 .work {
@@ -224,27 +248,68 @@ input[type=submit] {
     }
     .container {
         max-width: 980px;
+        padding: 20px;
+    }
+    #main-container {
+      padding-top: 130px;
+    }
+    .work {
+      width: 100%;
+    }
+    .auth-image {
+      width: 100%;
+      margin-bottom: 20px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .main-section {
-
+      width: 100%;
     }
-    .container {
-        max-width: 768px;
+    #main-container {
+      overflow: auto;
     }
-
+    .sidebar {
+      margin-bottom: 40px;
+    }
+    .work {
+      width: 45%;
+      margin-bottom: 10px;
+    }
+    .work:nth-child(odd) {
+      float: right;
+    }
+    .work:nth-child(even) {
+      margin-right: 0;
+    }
+    .auth-image {
+      width: 50%;
+    }
 }
 
 @media screen and (max-width: 640px) {
-    .main-section {
-        width: 70%;
+    #main-container {
+      padding-top: 0;
     }
     .container {
-        max-width: 640px;
+      max-width: 640px;
+      padding: 0;
     }
-    #masthead {
-        position: static;
+    #header {
+      position: static;
+      margin-bottom: 20px;
+    }
+    #logo {
+      width: 100%;
+    }
+    nav {
+      text-align: center;
+      margin: 15px;
+      width: 100%;
+    }
+    nav a {
+      width: 30%;
+      margin-left: 0;
+      padding-left: 0;
     }
 }
